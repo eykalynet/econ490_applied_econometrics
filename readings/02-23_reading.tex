@@ -1,0 +1,288 @@
+\documentclass[aspectratio=169]{beamer}
+
+% ------------------
+% Theme
+% ------------------
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% ------------------
+% Packages
+% ------------------
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+% ------------------
+% Title
+% ------------------
+\title{Empirical Designs in Applied Micro}
+\subtitle{Shift-Share IV and Unilateral Divorce Laws}
+\author{Erika Lynet Salvador}
+\date{\today}
+
+\begin{document}
+
+% =====================================================
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Big Picture}
+Three papers, three design lessons:
+
+\begin{itemize}
+    \item How to interpret and diagnose shift-share IV.
+    \item How staggered policy exposure affects long-run outcomes.
+    \item How dynamic treatment effects can overturn prior conclusions.
+\end{itemize}
+
+\end{frame}
+
+% =====================================================
+\section{Paper 1: Borusyak--Hull--Jaravel (2025, JEP)}
+
+\begin{frame}{Paper 1: Research Question}
+
+What identifies a shift-share (Bartik-style) instrument?
+
+\[
+z_i = \sum_{k=1}^K s_{ik} g_k
+\]
+
+When is this valid?
+Where does quasi-randomness come from?
+
+\end{frame}
+
+\begin{frame}{Paper 1: Core Contribution}
+
+Shift-share IV is not one design.
+
+There are two identification paths:
+
+\begin{enumerate}
+    \item Exogenous shifts (\(g_k\))
+    \item Exogenous shares (\(s_{ik}\))
+\end{enumerate}
+
+Each requires different assumptions and diagnostics.
+
+\end{frame}
+
+\begin{frame}{Paper 1: Identification via Exogenous Shifts}
+
+Interpretation:
+The shocks \(g_k\) are quasi-random.
+
+Units differ only in exposure weights.
+
+Key requirement:
+\[
+\text{Shocks uncorrelated with exposure-weighted unobservables.}
+\]
+
+Threat:
+Shocks correlated with omitted shift-level fundamentals.
+
+\end{frame}
+
+\begin{frame}{Paper 1: Shift-Based Checklist}
+
+\begin{itemize}
+    \item Is the shock plausibly exogenous?
+    \item Are there many shocks?
+    \item Do shocks predict pre-trends?
+    \item Is inference clustered appropriately?
+    \item Are incomplete shares handled correctly?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Paper 1: Identification via Exogenous Shares}
+
+Interpretation:
+Shares behave like valid instruments.
+
+Parallel-trends style condition:
+
+\[
+\text{Units with higher } s_{ik}
+\text{ would not have differential trends absent treatment.}
+\]
+
+Threat:
+Shares proxy for long-run structural decline.
+
+\end{frame}
+
+\begin{frame}{Paper 1: Share-Based Checklist}
+
+\begin{itemize}
+    \item Do shares satisfy exclusion?
+    \item Do pre-trends differ by exposure?
+    \item Are results driven by a few dominant shocks?
+    \item What do Rotemberg weights look like?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Paper 1: Why This Matters}
+
+Shift-share IV requires clarity:
+
+\begin{itemize}
+    \item Where does identification come from?
+    \item Where does sampling variation live?
+    \item What level should inference be done at?
+\end{itemize}
+
+\end{frame}
+
+% =====================================================
+\section{Paper 2: Gruber (2004, JLE)}
+
+\begin{frame}{Paper 2: Research Question}
+
+Is making divorce easier bad for children in the long run?
+
+Do children exposed to unilateral divorce laws
+experience worse adult outcomes?
+
+\end{frame}
+
+\begin{frame}{Paper 2: Methodology}
+
+\begin{itemize}
+    \item Exploit staggered state adoption of unilateral divorce.
+    \item Compare cohorts exposed vs unexposed in childhood.
+    \item Include state and year fixed effects.
+    \item Robustness: state trends and migration controls.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Paper 2: Outcomes}
+
+Adult outcomes measured years later:
+
+\begin{itemize}
+    \item Educational attainment
+    \item Family income
+    \item Marital stability
+    \item Suicide risk
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Paper 2: Results}
+
+Exposure to unilateral divorce laws in childhood:
+
+\begin{itemize}
+    \item ↓ Education
+    \item ↓ Income
+    \item ↑ Marital instability
+    \item ↑ Suicide risk
+\end{itemize}
+
+Interpretation:
+Family disruption and bargaining changes matter.
+
+\end{frame}
+
+\begin{frame}{Paper 2: Identification Concerns}
+
+\begin{itemize}
+    \item Policy endogeneity across states.
+    \item Differential trends.
+    \item Migration and mismeasurement of exposure.
+    \item Mechanism: divorce incidence vs bargaining.
+\end{itemize}
+
+\end{frame}
+
+% =====================================================
+\section{Paper 3: Wolfers (2006, AER)}
+
+\begin{frame}{Paper 3: Research Question}
+
+Did unilateral divorce laws raise divorce rates?
+
+Re-examines Friedberg (1998).
+
+\end{frame}
+
+\begin{frame}{Paper 3: Methodology}
+
+State-year panel of divorce rates.
+
+Uses event-study dynamics:
+
+\[
+\text{DivRate}_{st}
+=
+\sum_{\ell} \beta_\ell \mathbf{1}\{t-T_s=\ell\}
++ \alpha_s + \lambda_t
+\]
+
+Allows effects to evolve over time.
+
+\end{frame}
+
+\begin{frame}{Paper 3: Results}
+
+\begin{itemize}
+    \item Large short-run spike in divorce after reform.
+    \item Effect fades over time.
+    \item Small long-run effect on divorce flows.
+\end{itemize}
+
+Conclusion:
+Reform accelerates divorces rather than permanently raising them.
+
+\end{frame}
+
+\begin{frame}{Paper 3: Critique of Friedberg}
+
+Single post-reform dummy + trends
+can misattribute dynamic effects.
+
+Trend terms may absorb post-spike declines,
+creating artificial persistence.
+
+Lesson:
+Dynamics matter.
+
+\end{frame}
+
+\begin{frame}{Paper 3: Coasian Interpretation}
+
+If bargaining is efficient:
+
+Legal regime should not greatly affect divorce rates.
+
+Wolfers finds:
+
+\begin{itemize}
+    \item Some effect → bargaining frictions exist.
+    \item Small long-run effect → frictions limited.
+\end{itemize}
+
+\end{frame}
+
+% =====================================================
+\section{Synthesis}
+
+\begin{frame}{What These Papers Teach Us}
+
+\begin{itemize}
+    \item Identification must be explicit.
+    \item Trend specification can drive results.
+    \item Dynamic treatment effects matter.
+    \item Policy changes operate through outside options and bargaining.
+\end{itemize}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,213 @@
+\documentclass[12pt]{article}
+
+% -------------------------------------------------
+%                 PACKAGES
+% -------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{caption, subcaption}
+\usepackage{booktabs, array}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{footmisc}
+\usepackage{pdflscape}
+\usepackage{appendix}
+\usepackage{todonotes}
+\usepackage{footmisc}
+\usepackage[normalem]{ulem} % provides \sout
+\usepackage{xcolor}
+\usepackage[draft]{changes}
+
+\definecolor{addcolor}{HTML}{1B7F3B}
+\definecolor{delcolor}{HTML}{B22222}
+\definecolor{replcolor}{HTML}{4B4BA5}
+
+\setaddedmarkup{\textcolor{addcolor}{#1}}
+\setdeletedmarkup{\textcolor{delcolor}{\sout{#1}}}
+\makeatletter
+\renewcommand{\replaced}[2]{%
+  {\textcolor{replcolor}{#1}}{\textcolor{delcolor}{\sout{#2}}}%
+}
+\makeatother
+% -------------------------------------------------
+%               SPACING
+% -------------------------------------------------
+\onehalfspacing
+
+% -------------------------------------------------
+%            THEOREM ENVIRONMENTS
+% -------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{hypothesis}{Hypothesis}
+
+\newenvironment{proof}[1][Proof]{%
+\noindent\textbf{#1.} }{\hfill$\square$}
+
+% -------------------------------------------------
+%              CUSTOM COMMANDS
+% -------------------------------------------------
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+
+% -------------------------------------------------
+%                 DOCUMENT
+% -------------------------------------------------
+\begin{document}
+
+% -------------------------------------------------
+%                  TITLE
+% -------------------------------------------------
+\title{ECON490 Project :D\thanks{Acknowledgment text here.}}
+\author{
+Erika Salvador\thanks{Amherst College, esalvador28@amherst.edu} 
+\and 
+Caroline Theoharides\thanks{Amherst College, ctheoharides@amherst.edu.}
+\and
+Susan Godlonton\thanks{Williams College, sg5@williams.edu}
+}
+\date{\today}
+\maketitle
+
+% -------------------------------------------------
+%                 ABSTRACT
+% -------------------------------------------------
+\begin{abstract}
+Placeholder abstract text.
+
+\medskip
+\noindent\textbf{Keywords:} key1, key2, key3 \\
+\textbf{JEL Codes:} key1, key2, key3
+\end{abstract}
+
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
+
+% -------------------------------------------------
+%               MAIN TEXT
+% -------------------------------------------------
+
+\section{Introduction}
+\label{sec:introduction}
+
+\section{Background}
+\label{sec:background}
+
+International migration is a defining feature of economic life in many low- and middle-income countries. In the Philippines, overseas employment has been actively promoted as a development strategy for decades, and remittances constitute a substantial share of national income. A large empirical literature documents that migration is associated with higher household consumption and better risk-sharing arrangements, as well as greater investment in children’s human capital \citep{yang2008international, mckenzie2007network}. These findings have shaped the prevailing view that migration improves welfare in origin communities through income gains and risk diversification.
+
+Less understood, however, is how migration reshapes household organization and the distribution of authority within marriage. When one spouse migrates, prolonged physical separation alters both the allocation of income and the process through which financial decisions are made. Earnings generated abroad may be retained and transferred at the migrant’s discretion, or they may be pooled and administered by the spouse who remains at home. The timing, amount, and earmarking of remittances therefore become instruments of control. Because bargaining models of the household assign decision weight to partners based on their control over resources and outside options, such shifts in financial authority have direct implications for intrahousehold power. In standard collective and noncooperative models, improvements in women’s income or fallback position increase their bargaining weight and expand their influence over allocation outcomes \citep{manser1980marriage, mcelroy1981nash}. Extensions that incorporate violence further imply that stronger economic positions for women can reduce abuse by increasing the expected cost to partners of engaging in violent behavior or by strengthening women’s capacity to exit abusive relationships \citep{aizer2010gender}.
+
+At the same time, alternative theoretical perspectives emphasize that changes in relative economic status may generate conflict rather than cooperation. When increases in women’s income challenge established gender hierarchies, men may perceive a loss of status or authority within the household \citep{eswaran2011domestic, anderberg2016unemployment}. In such settings, shifts in economic control can alter expectations about decision-making, spending priorities, or autonomy, potentially creating tension over household roles. Although women's labor force participation and international migration rates are high in the Philippines, ethnographic \citep{medina2001filipino} evidence suggests that expectations surrounding male provision and authority within marriage remain influential. If male identity is closely tied to the role of primary provider, a decline in relative earnings or authority may provoke attempts to reassert control, including through coercive or violent behavior. The empirical literature reflects this ambiguity. Positive labor market shocks to women are associated with reductions in intimate partner violence (IPV) in some contexts, whereas adverse shocks to men are associated with increases in abuse \citep{aizer2010gender, autor2019work}. These findings indicate that the effect of economic change on household conflict depends on how income shocks interact with bargaining positions and prevailing gender norms.
+
+This theoretical ambiguity is likely to be especially pronounced in settings where formal exit options are limited. The Philippines provides such an environment. The country is among the world’s largest exporters of labor, with women comprising a substantial share of deployed overseas workers \citep{mcauliffe2024world}, while legal divorce remains unavailable.\footnote{Annulment is legally available but requires judicial proceedings, entails substantial financial and evidentiary burdens, and remains inaccessible for many households.} Formal marital dissolution is therefore not a credible outside option for most couples, including those experiencing IPV. In standard bargaining frameworks, the credibility of exit determines bargaining weight. When legal exit is constrained, alternative margins—such as physical separation or changes in control over income—may partially substitute for formal dissolution. International migration thus introduces prolonged spousal separation without terminating the marital contract. On one hand, migration may strengthen women’s autonomy by altering resource control and by increasing geographic distance from a partner. On the other hand, separation without dissolution may generate instability by weakening monitoring and increasing uncertainty about authority within marriage. Whether migration reduces or intensifies conflict in this setting is therefore theoretically indeterminate. Migration may reduce violence by improving effective outside options, or it may intensify conflict by disrupting established household roles. The welfare consequences of migration depend not only on income gains but also on how migration interacts with constrained exit options to reshape exposure to violence within marriage.
+
+At the same time, the relationship may also operate in reverse. Households experiencing conflict or abuse may have different incentives to send a spouse abroad. Migration may function as a means of physical separation, income stabilization, or informal exit in the presence of violence. Observed associations between migration and intimate partner violence may therefore reflect not only the effect of migration on household conflict, but also the effect of violence on migration decisions. Identifying the causal relationship requires variation that is plausibly independent of household-level conflict and allows these channels to be separated.
+
+One source of such variation  plausibly arises from differences in local enforcement conditions. Because abusive behavior is shaped not only by the expected consequences imposed by the legal environment, variation in enforcement provides a natural setting in which to study these effects. In economic models of crime, behavior depends on the expected probability and severity of punishment \citep{becker1968crime}. Extensions of this framework to domestic violence similarly highlight that abuse reflects both private bargaining dynamics and the expected cost imposed by legal sanctions \citep{aizer2010gender, iyengar2009does}. We therefore consider two distinct mechanisms: one concerning direct deterrence and the other concerning moderation. First, expanded local reporting and protection infrastructure may directly reduce violence by increasing the expected cost of abusive behavior. If victims can more easily report abuse and access formal protection, the likelihood that violence results in sanctions may arise, which strengthens deterrence independent of changes in household bargaining positions. Second, enforcement may shape how economic shocks affect household conflict. If international migration alters bargaining positions within marriage—by shifting control over income, geographic separation, or effective outside options—its impact on violence may depend on whether abusive behavior carries meaningful expected consequences. Where enforcement is weak, changes in bargaining power may not translate into reduced violence. Conversely, where enforcement is credible, shifts in economic control may more effectively constrain abusive behavior. In this case, observed violence reflects both the direct deterrent effect of enforcement and its interaction with underlying economic conditions.
+
+Variation in local enforcement conditions arises from both the staggered rollout and heterogeneous functionality of barangay Violence Against Women (VAW) desks. These desks were mandated under Republic Act No. 9710, the Magna Carta of Women, enacted in 2009 \citep{ra9710}. Implementing guidelines were formalized through Joint Memorandum Circular No. 2010-2, issued jointly by the Department of the Interior and Local Government (DILG), the Philippine Commission on Women (PCW), the Department of Social Welfare and Development (DSWD), the Department of Health (DOH), and the Department of Education (DepEd) \citep{jmc2010}. Although the mandate applied nationwide, implementation was neither immediate nor uniform across barangays.
+
+Rollout began in earnest around 2011 following issuance of the implementing guidelines \citep{jmc2010}. Administrative reports from DILG and PCW document rapid but uneven expansion \citep{dilg_nboo_2017, pcw_stats_2019}. From virtually zero coverage in 2009, approximately 75 percent of barangays had established a VAW desk by 2014. However, this aggregate figure masks substantial regional disparities. In Region V (Bicol), only 38 percent of barangays had established desks by that time; Region VIII (Eastern Visayas) reached 51 percent; and the Autonomous Region in Muslim Mindanao (ARMM) reported only 274 of 2,490 barangays—approximately 11 percent—having established desks \citep{dilg_nboo_2017}. By mid-2017, DILG’s National Barangay Operations Office reported roughly 88 percent coverage (around 37,000 of 42,000 barangays), and by 2018–2019 coverage plateaued at approximately 90 percent \citep{pcw_stats_2019}. Remaining gaps were concentrated in geographically isolated, conflict-affected, and resource-constrained areas, particularly what is now the Bangsamoro Autonomous Region in Muslim Mindanao (BARMM).
+
+However, a key nuance is that formal establishment does not necessarily imply effective enforcement capacity. Early administrative reporting primarily tracked whether a desk existed; only later did systematic evaluation of operational quality emerge. In 2017, DILG introduced a monitoring and evaluation framework through Memorandum Circular No. 2017-114, institutionalizing assessment of VAW desk functionality \citep{dilg_mc2017_114}. Beginning in 2018, field officers evaluated desks along five dimensions: (1) establishment (physical setup and equipment), (2) resources (budget and materials), (3) policies (local ordinances and protocols), (4) integration into Gender and Development plans and budgets, and (5) accomplishments (including reporting and case assistance) \citep{dilg_mc2017_114}. Ratings were consolidated at municipal, provincial, and regional levels.
+
+These assessments reveal that nominal coverage overstated effective capacity. As of January 31, 2022, the PCW Barangay VAW Desk Functionality Report—covering 33,961 barangays—indicates that only about 36 percent achieved the highest functionality rating \citep{pcw_functionality_2022}. While most assessed barangays had formally established desks, only roughly one-third met all functionality benchmarks. The remainder were rated partially functional or in need of development. Reported gaps included lack of dedicated space, insufficient equipment, limited training, overstretched personnel, and inconsistent documentation \citep{pcw_functionality_2022}. In other words, institutional presence and institutional credibility are distinct dimensions.
+Institutional coordination mechanisms also evolved over time. The Inter-Agency Council on Violence Against Women and their Children (IACVAWC), established under Republic Act No. 9262, developed referral protocols and national mapping initiatives to strengthen coordination among barangays, police units, health facilities, and social welfare offices \citep{ra9262, iacvawc_mapping}. These initiatives aimed to reduce informational frictions and improve the reliability of referral systems. However, publicly available reporting appears limited after 2022, making it difficult to assess the extent to which coordination improvements translated into sustained enforcement gains.
+
+Taken together, this institutional trajectory generates two analytically distinct sources of variation. First, the staggered rollout between 2011 and roughly 2019 created cross-municipality differences in when formal reporting infrastructure became available. Second—and more subtly—functionality assessments reveal persistent heterogeneity in enforcement quality even after nominal coverage became widespread. This distinction is empirically consequential: access to a desk may alter reporting incentives, but only credible, functional desks plausibly shift enforcement expectations and bargaining dynamics within households. These features provide a setting to examine how economic shocks—such as international migration—interact not only with the presence of local institutions, but with their operational strength, in shaping exposure to intimate partner violence.
+
+Also some stuff about the literature review that we've read. Draft:
+Beyond generating quasi-experimental variation in local enforcement conditions, the staggered rollout and heterogeneous functionality of VAW desks provide a setting to disentangle competing mechanisms linking migration to intimate partner violence. A central challenge in this literature is distinguishing changes in underlying incidence from changes in reporting behavior. Prior work has used administrative records—such as police reports, protection order filings, hotline calls, or shelter utilization—to study how institutional access alters measured IPV outcomes. However, such records often conflate true changes in violence with shifts in victims’ willingness or ability to report.
+In this context, the timing of VAW desk establishment plausibly lowers reporting costs by creating a formal, proximate intake point at the barangay level. By contrast, variation in desk functionality captures differences in enforcement credibility and institutional capacity—factors more likely to affect perpetrators’ expectations of sanction and, therefore, the underlying incidence of violence. This distinction allows us to separately assess whether migration interacts primarily with reporting infrastructure (suggesting measurement or help-seeking effects) or with enforcement strength (suggesting changes in bargaining power and deterrence). In other words, the institutional variation enables us to move beyond documenting reduced-form effects and toward identifying the mechanisms through which migration reshapes household power dynamics.
+
+
+\section{Literature Review}
+\label{sec:literature}
+
+\section{Data}
+\label{sec:data}
+
+\section{Methodology}
+\label{sec:method}
+
+\section{Results}
+\label{sec:results}
+
+\section{Discussion}
+\label{sec:discussion}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+% -------------------------------------------------
+%               REFERENCES
+% -------------------------------------------------
+
+\clearpage
+\singlespacing
+\setlength{\bibsep}{0pt}
+
+\bibliographystyle{apalike}
+\bibliography{references}   
+
+% -------------------------------------------------
+%            TABLES AND FIGURES
+% -------------------------------------------------
+
+\clearpage
+\onehalfspacing
+
+\section*{Tables}
+\addcontentsline{toc}{section}{Tables}
+
+% Example:
+% \begin{table}[htbp]
+% \centering
+% \caption{Placeholder}
+% \begin{tabular}{lcc}
+% \toprule
+% Variable & Model 1 & Model 2 \\
+% \midrule
+% X & 0.123 & 0.456 \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+\clearpage
+
+\section*{Figures}
+\addcontentsline{toc}{section}{Figures}
+
+% Example:
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=.6\textwidth]{fig/placeholder.pdf}
+%   \caption{Placeholder}
+% \end{figure}
+
+% -------------------------------------------------
+%                 APPENDIX
+% -------------------------------------------------
+
+\clearpage
+\begin{appendices}
+\onehalfspacing
+
+\section{Additional Results}
+\label{appendix:A}
+
+\section{Data Construction}
+\label{appendix:B}
+
+\end{appendices}
+
+\end{document}
